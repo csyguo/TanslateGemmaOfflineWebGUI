@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TranslateGemma 4B — Offline Translation</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>TranslateGemma 4B</h1>
+        <span class="subtitle">Offline Translation</span>
+    </header>
+
+    <main>
+        <div class="translation-panel">
+            <div class="column source-column">
+                <div class="lang-bar">
+                    <select id="source-lang" class="lang-select"></select>
+                </div>
+                <textarea id="source-text" class="text-area" placeholder="Enter text to translate..."></textarea>
+            </div>
+
+            <div class="swap-column">
+                <button id="swap-btn" class="swap-button" title="Swap languages">&#8644;</button>
+            </div>
+
+            <div class="column target-column">
+                <div class="lang-bar">
+                    <select id="target-lang" class="lang-select"></select>
+                </div>
+                <textarea id="target-text" class="text-area output" readonly placeholder="Translation will appear here..."></textarea>
+            </div>
+        </div>
+
+        <div class="action-bar">
+            <button id="translate-btn" class="translate-button">Translate</button>
+            <span class="shortcut-hint">Ctrl+Enter</span>
+            <span id="status" class="status">Ready</span>
+        </div>
+    </main>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
